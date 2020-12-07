@@ -1,4 +1,4 @@
-const Theme = {
+const theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
@@ -8,9 +8,9 @@ const body = document.querySelector('body');
 
 const changeTheme = event => {
   if (checkboxRef.checked) {
-    replaceTheme(Theme.LIGHT, Theme.DARK);
+    replaceTheme(theme.LIGHT, theme.DARK);
   } else {
-    replaceTheme(Theme.DARK, Theme.LIGHT);
+    replaceTheme(theme.DARK, theme.LIGHT);
   }
 };
 
@@ -21,12 +21,12 @@ const replaceTheme = (oldTheme, newTheme) => {
 };
 
 function chooseTheme() {
-  const currentThema = localStorage.getItem('Theme');
-  if (currentThema === Theme.DARK) {
-    body.classList.add(Theme.DARK);
+  const currentTheme = localStorage.getItem('Theme');
+  if (currentTheme === theme.DARK) {
+    body.classList.add(theme.DARK);
     checkboxRef.checked = true;
   } else {
-    body.classList.add(Theme.LIGHT);
+    body.classList.add(theme.LIGHT);
   }
 }
 
