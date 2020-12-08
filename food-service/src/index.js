@@ -1,6 +1,6 @@
 import menuCard from './templates/menu-card.hbs';
 import itemCard from './menu.json';
-import './tema';
+import './theme';
 import './styles.css';
 
 const newCard = menuCard(itemCard);
